@@ -1,0 +1,96 @@
+/* Estilo geral */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Estilos para os botões de combustível */
+
+.fuel-choice {
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.fuel-options {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50px;
+}
+
+.fuel-button {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+#gasolina {
+  background-color: red;
+}
+
+#alcool {
+  background-color: green;
+}
+
+#diesel {
+  background-color: orange;
+}
+
+.fuel-button.selected {
+  background-color: gray;
+}
+
+/* Estilos para o botão "ABASTECER" */
+
+#abastecer {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
+
+#abastecer:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Estilos para as opções de pagamento */
+
+.payment-options {
+  background-color: orange;
+  color: white;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.payment-options h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.payment-options ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.payment-options li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
