@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ÁLCOOL</title>
+</head>
+<body>
+	<h1>ÁLCOOL R$5,49</h1>
+
+	<label for="valor">Valor a ser abastecido:</label>
+	<input type="number" step="0.01" id="valor" name="valor" onchange="calcular()">
+	
+	<label for="litros">Quantidade de litros abastecidos:</label>
+	<input type="number" step="0.01" id="litros" name="litros" readonly><br><br>
+
+	<div id="pagarDiv" style="display: none;">
+		<button id="pagarButton" onclick="pagar()">PAGAR</button>
+	</div>
+
+	<script>
+		const precoGasolina = 5.49;
+
+		function calcular() {
+			const valor = parseFloat(document.getElementById('valor').value);
+
+			const litros = valor / precoGasolina;
+
+			document.getElementById('litros').value = litros.toFixed(2);
+
+			if (valor > 0) {
+				document.getElementById('pagarDiv').style.display = 'block';
+			} else {
+				document.getElementById('pagarDiv').style.display = 'none';
+			}
+		}
+
+		function pagar() {
+			alert('Pagamento realizado com sucesso!');
+			document.getElementById('valor').value = '';
+			document.getElementById('litros').value = '';
+			document.getElementById('pagarDiv').style.display = 'none';
+		}
+	</script>
+</body>
+</html>

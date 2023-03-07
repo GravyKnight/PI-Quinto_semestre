@@ -27,8 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Função que é chamada quando o botão "ABASTECER" é clicado
   function abastecer() {
-    // Redireciona o usuário para a próxima página
-    window.location.href = 'proxima-pagina.html';
+    // Verifica qual botão de combustível está selecionado
+    const selectedFuel = document.querySelector('.fuel-button.selected');
+  
+    // Redireciona o usuário para a página correspondente
+    if (selectedFuel.id === 'gasolina') {
+      window.location.href = 'proxima.html';
+    } else if (selectedFuel.id === 'alcool') {
+      window.location.href = 'proxima2.html';
+    } else if (selectedFuel.id === 'diesel') {
+      window.location.href = 'proxima3.html';
+    }
   }
 
   // Adiciona um event listener para o botão "ABASTECER"
